@@ -27,7 +27,6 @@ app.get('/Rooms',async function(req,res){
         res.json(rooms)
         //console.log(res)
     } catch (error) {
-        console.log(error)
         res.status(500).json({message:"Something Went Wrong"})
     }
 })
@@ -42,7 +41,6 @@ app.get('/Customers', async function(req,res){
         res.json(customers)
         console.log(res)
     } catch (error) {
-        console.log(error)
         res.status(500).json({message:"Something Went Wrong"})
     }
 })
@@ -56,7 +54,6 @@ app.post('/room', async function(req,res){
         await connection.close();
         res.json({message:"Room Insert"})
     } catch (error) {
-        console.log(error)
         res.status(500).json({message:"Something Went Wrong"})
     }
 })
@@ -118,7 +115,6 @@ app.get('/BookingRooms', async function(req,res){
         await connection.close();
         res.json(bookingrooms)
     } catch (error) {
-        console.log(error);
         res.status(500).json({message:"Something Went Wrong"})
     }
 })
