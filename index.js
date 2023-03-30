@@ -10,9 +10,6 @@ app.listen(process.env.PORT || 3001)
 // middleware
 app.use(express.json());
 
-//const rooms = [];
-//const customers = [];
-
 app.get('/', function(req,res){
     res.send("Welcome to Hall Booking Website");
 })
